@@ -1,25 +1,23 @@
 class MyHashSet {
-    int keys[1000001];
+    const static int SET_SIZE = 1000001;
+    bool set[SET_SIZE];
 public:
     MyHashSet() {
-        
+        for (int i=0; i<SET_SIZE; i++){
+            set[i] = false;
+        }
     }
     
     void add(int key) {
-        keys[key] = 1;
+        set[key] = true;
     }
     
     void remove(int key) {
-        keys[key] = 0;
+        set[key] = false;
     }
     
     bool contains(int key) {
-        if (keys[key] == 1){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return set[key];
     }
 };
 
