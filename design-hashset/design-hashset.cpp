@@ -1,20 +1,20 @@
 class MyHashSet {
-    int set[1000001];
-    
+    // int set[1000001];
+    set<int> keys;
 public:
     MyHashSet() {
     }
     
     void add(int key) {
-        set[key] = 1;
+        keys.insert(key);
     }
     
     void remove(int key) {
-        set[key] = 0;
+        keys.erase(key);
     }
     
     bool contains(int key) {
-        if(set[key] == 1) {
+        if(keys.find(key) != keys.end()) {
             return true;
         }
         else {
