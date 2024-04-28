@@ -15,7 +15,6 @@ public:
                 sum = digit*digit + sum;
             }
             n = sum;
-            cout << sum << " ";
 
         }
         
